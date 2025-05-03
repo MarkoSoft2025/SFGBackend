@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-//const studentRoutes = require("./routes/studentRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 
 
 const app = express();
@@ -9,9 +9,8 @@ app.use(cors()); // Enable Cross-Origin Resource Sharing
 
 // Routes
 
-//app.use("/api/Students", studentRoutes);
+app.use("/api/Students", studentRoutes);
 
-//app.use("/api/ContractLogs", contractLogsRoutes);
 app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello from the API!" });
 });

@@ -21,12 +21,11 @@ module.exports = {
       res.status(200).json({
         message: 'Login successful!',
         user: {
-          id: user.studentID,
-          studno: user.studentNumber,
+          id: user.studentid,
+          lrn: user.lrn,
           username: user.username,
-          fullName: user.firstName + " " + user.lastName,
-          track: user.track,
-          studentSignup: user.studentSignup,
+          fullName: user.firstname + " " + user.lastname,
+          track: user.admissiontrack,
         },
       });
     });
@@ -38,7 +37,7 @@ module.exports = {
         console.error('Error creating Student:', err);
         return res.status(500).json({ error: 'Database error' });
       }
-      res.status(201).json({ message: 'Student created successfully', studentID: req.body.studentID });
+      res.status(201).json({ message: 'Student created successfully', studentid: req.body.studentid });
     });
   },
 
