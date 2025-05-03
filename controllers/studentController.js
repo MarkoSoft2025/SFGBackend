@@ -59,7 +59,7 @@ module.exports = {
         return res.status(500).json({ error: 'Database error' });
       }
       if (!result) {
-        return res.status(404).json({ message: 'Student not found1' });
+        return res.status(404).json({ message: 'Student not found' });
       }
       res.json(result);
     });
