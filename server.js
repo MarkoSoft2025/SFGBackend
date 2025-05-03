@@ -21,21 +21,9 @@ app.use(express.json()); // For parsing JSON request bodies
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 
 // Routes
-app.use("/api/StudentFriend", StudentFriend);
-app.use("/api/Messages", Messages);
-app.use("/api/authUser", authUserRoutes);
-app.use("/api/auth", authRoutes);
+
 app.use("/api/Students", studentRoutes);
-app.use("/api/FamilyBackground", StudentFamilyBackgroundRoutes);
-app.use("/api/StudentCourses", StudentCoursesRoutes);
-app.use("/api/Courses", CoursesRoutes);
-app.use("/api/Credentials", CredentialsRoutes);
-app.use("/api/Employees", EmployeeRoutes);
-app.use("/api/AverageGrade", AverageGradeRoutes);
-app.use("/api/OtherInformation", OtherInformationRoutes);
-app.use("/api/Announcement", AnnouncementRoutes);
-app.use("/api/Comments", CommentsRoutes);
-app.use("/api/Reaction", ReactionRoutes);
+
 //app.use("/api/ContractLogs", contractLogsRoutes);
 app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello from the API!" });
