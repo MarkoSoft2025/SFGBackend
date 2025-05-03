@@ -37,7 +37,7 @@ module.exports = {
   },
 
   update: (id, data, callback) => {
-    const query = 'UPDATE tbl_student SET ? WHERE cstudentid = ?';
+    const query = 'UPDATE tbl_student SET ? WHERE studentid = ?';
     db.query(query, [data, id], callback);
   },
 
