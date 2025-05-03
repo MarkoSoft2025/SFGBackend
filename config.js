@@ -10,7 +10,7 @@ const db = mysql.createConnection({
   port: parseInt(process.env.PORT, 10),
   ssl: {
     rejectUnauthorized: true,
-    ca: fs.readFileSync(process.env.SSL_CA, 'utf8'), // read the .pem file
+    ca: process.env.CA_CERTIFICATE, // read the .pem file
   },
 });
 
