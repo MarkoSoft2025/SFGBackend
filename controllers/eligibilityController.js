@@ -8,7 +8,7 @@ module.exports = {
         console.error('Error creating Eligibility:', err);
         return res.status(500).json({ error: 'Database error' });
       }
-      res.status(201).json({ message: 'Eligibility Created Successfully', EligibilityID: req.body.EligibilityID });
+      res.status(201).json({ message: 'Eligibility Created Successfully', eligibilityID: req.body.eligibilityID });
     });
   },
 
@@ -25,11 +25,11 @@ module.exports = {
 getAllEligibilityByEmpID: (req, res) => {
   Eligibility.getAllByEmpId(req.params.empid, (err, result) => {
       if (err) {
-        console.error('Error fetching ChildrenProfile:', err);
+        console.error('Error fetching Eligibility:', err);
         return res.status(500).json({ error: 'Database error' });
       }
       if (!result) {
-        return res.status(404).json({ message: 'Children Profile not found' });
+        return res.status(404).json({ message: 'Eligibility not found' });
       }
       res.json(result);
     });
