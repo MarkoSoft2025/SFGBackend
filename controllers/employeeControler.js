@@ -24,6 +24,7 @@ module.exports = {
           id: user.employeeid,
           username: user.username,
           fullName: user.firstname + " " + user.lastname,
+          position: user.position,
         },
       });
     });
