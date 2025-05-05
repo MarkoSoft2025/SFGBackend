@@ -1,4 +1,4 @@
-const Subjects = require('../models/subjects');
+const Subjects = require('../models/Subject');
 
 
 module.exports = {

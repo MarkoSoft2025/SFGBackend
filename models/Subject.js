@@ -29,6 +29,3 @@ module.exports = {
     db.query(query, [id], callback);
   },
 };
-
-
-
