@@ -12,7 +12,7 @@ module.exports = {
   },
 
   getById: (id, callback) => {
-    const query = 'SELECT * FROM subjects WHERE subjectsid = ?';
+    const query = 'SELECT * FROM subjects WHERE subjectid = ?';
     db.query(query, [id], (err, results) => {
       if (err) return callback(err, null);
       callback(null, results[0]);
@@ -20,12 +20,12 @@ module.exports = {
   },
 
   update: (id, data, callback) => {
-    const query = 'UPDATE subjects SET ? WHERE subjectsid = ?';
+    const query = 'UPDATE subjects SET ? WHERE subjectid = ?';
     db.query(query, [data, id], callback);
   },
 
   delete: (id, callback) => {
-    const query = 'DELETE FROM subjects WHERE subjectsid = ?';
+    const query = 'DELETE FROM subjects WHERE subjectid = ?';
     db.query(query, [id], callback);
   },
 };

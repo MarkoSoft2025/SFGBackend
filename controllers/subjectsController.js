@@ -3,14 +3,14 @@ const Subjects = require('../models/subjects');
 
 module.exports = {
 
-    
+
   createSubjects: (req, res) => {
     Subjects.create(req.body, (err, result) => {
       if (err) {
         console.error('Error creating Subjects:', err);
         return res.status(500).json({ error: 'Database error' });
       }
-      res.status(201).json({ message: 'Subjects Created Successfully', Subjectsid: req.body.Subjectsid });
+      res.status(201).json({ message: 'Subjects Created Successfully', subjectid: req.body.subjectid });
     });
   },
 
