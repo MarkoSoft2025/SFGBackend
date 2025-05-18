@@ -13,6 +13,7 @@ const familyBackgroundRoutes = require("./routes/familyBackgroundRoutes");
 const facultyProfileRoutes = require("./routes/facultyProfileRoutes");
 const educationalBackgroundRoutes = require("./routes/educationalBackgroundRoutes");
 const subjectRoutes = require("./routes/subjectRoutes");
+const schoolProfileRoutes = require("./routes/schoolProfileRoutes");
 
 
 
@@ -38,6 +39,7 @@ app.use("/api/EducationalBackground", educationalBackgroundRoutes);
 app.use("/api/Students", studentRoutes);
 app.use("/api/Employees", employeeRoutes);
 app.use("/api/Subjects", subjectRoutes);
+app.use("/api/SchoolProfile", schoolProfileRoutes);
 
 app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello from the API!" });
